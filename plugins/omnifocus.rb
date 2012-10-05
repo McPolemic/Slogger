@@ -49,7 +49,7 @@ class OmniFocusLogger < Slogger
       end tell
       return strText
     APPLESCRIPT}
-    values.each do |value|
+    values.chomp().split("\r").each do |value|
       # Create entries here
       output += "* " + value + "\n"
     end
